@@ -37,9 +37,4 @@ A simple **STM32C0 bare-metal firmware project** that uses a push button to alte
 
 WOWKI LINK: https://wokwi.com/projects/476672277483252737
 
-### Files
 
-```text
-main.c
-README.md
-```
