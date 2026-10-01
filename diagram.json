@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "Sarthak Pandey",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-st-nucleo-c031c6", "id": "nucleo", "top": 0.83, "left": -0.98, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 73.2, "left": -217, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 159.6,
+      "left": -226.6,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 109.55,
+      "left": -153.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 186.35,
+      "left": -153.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 275,
+      "left": -297.6,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:PA3", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:PA2", "", [] ],
+    [ "led1:A", "r1:1", "green", [ "v0", "h38.4" ] ],
+    [ "led2:A", "r2:1", "green", [ "v0" ] ],
+    [ "nucleo:PC14", "r2:2", "green", [ "h0" ] ],
+    [ "nucleo:PC13", "r1:2", "green", [ "h-57.6", "v-19.2" ] ],
+    [ "led1:C", "nucleo:GND.2", "green", [ "v0" ] ],
+    [ "led2:C", "nucleo:GND.5", "green", [ "v0" ] ],
+    [ "btn1:1.l", "btn1:1.r", "green", [ "h0" ] ],
+    [ "btn1:2.l", "btn1:2.r", "green", [ "h67.2", "v0.2" ] ],
+    [ "btn1:1.r", "nucleo:PA0", "green", [ "v0" ] ],
+    [ "btn1:2.r", "nucleo:GND.6", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
