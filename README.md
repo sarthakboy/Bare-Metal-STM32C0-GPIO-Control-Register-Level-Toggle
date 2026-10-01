@@ -1,0 +1,1 @@
+# Bare-Metal-STM32C0-GPIO-Control-Register-Level-Toggle
